@@ -16,21 +16,14 @@ console.log(btn)
 div.addEventListener('click',()=>{
     console.log('div')
     alert('div')
-},
-{
-    capture:true
 })
 form.addEventListener('click',(e)=>{
     // e.preventDefault()
     console.log('form')
     alert('form')
-},{
-    capture:true
 })
-btn.addEventListener('click',()=>{
+btn.addEventListener('click',(e)=>{
     console.log('button')
     alert('button')
-},
-{
-    capture:true
+    e.stopPropagation()
 })
